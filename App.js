@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
-import Pin from './app/component/Pin'
+import Pin from './assets/component/Pin'
 export default class App extends Component {
   render() {
     return (

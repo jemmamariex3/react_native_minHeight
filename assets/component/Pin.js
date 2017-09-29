@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View } from 'react-native'
-import {PinIcon} from '../util/icons'
+import {StyleSheet, Text, View, Image } from 'react-native'
 
 import UtilityNavButton from './UtilityNavButton'
 import Button from './Button'
+import LocalImage from './LocalImage'
 
 export default class Pin extends Component{
     render(){
@@ -23,7 +23,12 @@ export default class Pin extends Component{
                     </View>
                 </View>
                 <View style = {styles.PinContent}>
-                    <Text style = {styles.ImagePlaceholder}>Placeholder</Text>
+                    <LocalImage
+                        source ={require('../img/Arrow.jpg')}
+                        originalWidth ={736}
+                        originalHeight={900}
+                    />
+
                 </View>
 
                 <View style = {styles.PinMeta}>
@@ -91,7 +96,6 @@ const styles = StyleSheet.create({
         alignItems:'flex-end' //default direction will always be column unless you specify 'row' therefore, alignitems will adjust horizontally
     },
     PinContent:{
-        flex:3,
         justifyContent: 'center',
         alignItems:"center",
         paddingLeft:8,
