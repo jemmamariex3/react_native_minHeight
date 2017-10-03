@@ -24,9 +24,9 @@ export default class Pin extends Component{
                 </View>
                 <View style = {styles.PinContent}>
                     <LocalImage
-                        source ={require('../img/Arrow.jpg')}
-                        originalWidth ={736}
-                        originalHeight={900}
+                        source ={this.props.pinsource.imageSource}
+                        originalWidth ={this.props.pinsource.originalWidth}
+                        originalHeight={this.props.pinsource.originalHeight}
                     />
 
                 </View>
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     PinContainer:{
         // flex:1,
         // alignSelf: 'stretch',
-        backgroundColor: "green"
+        backgroundColor:'white'
     },
     PinHeader:{
         backgroundColor: 'white',
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     },
     PinMeta:{
         flex:1,
-        minHeight: 80,
+        minHeight: 70,
         flexDirection:'row',
         paddingTop:16,
         paddingRight: 8,
