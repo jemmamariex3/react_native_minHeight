@@ -62,14 +62,15 @@ export default class Pin extends Component{
 
 const styles = StyleSheet.create({
     PinContainer:{
-        flex:1,
-        alignSelf: 'stretch'
+        // flex:1,
+        // alignSelf: 'stretch',
+        backgroundColor: "green"
     },
     PinHeader:{
         backgroundColor: 'white',
         flexDirection: 'row',
         alignItems:'flex-end', //brings the icons down to the bottom left instead of the upper right
-        flex:1,
+        minHeight:50, //minWidth, maxWidth, maxHeight
         justifyContent: 'space-between',
         padding: 8
 
@@ -103,6 +104,7 @@ const styles = StyleSheet.create({
     },
     PinMeta:{
         flex:1,
+        minHeight: 80,
         flexDirection:'row',
         paddingTop:16,
         paddingRight: 8,
